@@ -1,0 +1,56 @@
+body {
+  padding: 12px 20px 12px 20px;
+  color: #000;
+  background: #fff;
+}
+
+body {
+  font-family: 'Arvo', serif;
+  font-size: 0.65em;
+  line-height: 1.3em;
+}
+
+p { 
+  margin: 0px 12px 12px 0px; 
+  text-align: justify;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  font-family: 'Arvo', serif;
+  font-size: 1.25em;
+  font-weight:bold;
+  margin: 0 0 15px 0;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight:bold;
+  margin: 0 0 10px 0;
+}
+
+table, tr, td { 
+  margin: 0; padding: 0; 
+}
+
+td { 
+  padding: 0px 10px 0px 0px; 
+}
+
+#main { 
+  margin-left: 230px; 
+}
+
+a, a.visited {
+  color: #224b8d;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color:#eee;
+}
