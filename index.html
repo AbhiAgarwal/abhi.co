@@ -221,41 +221,31 @@
       window.myLine = new Chart(ctx).Line(lineChartData, options);
     });
   }
+  function visibleActiveState(){
+    $(activeState).hide();
+    activeState = "#researchandprojects";
+    $(activeState).show();
+  }
+  function invisibleActiveState(newActiveState){
+    $(activeState).hide();
+    activeState = newActiveState;
+    $(activeState).show();
+  }
+  function currentStateConsider(currentState){
+    if($(currentState).is(':visible')){visibleActiveState();
+    } else {invisibleActiveState(currentState);}
+  }
   // Loading Partials
   $("#productivityClick").click(function() {
-    if($('#canvas').is(':visible')){
-      $(activeState).hide();
-      activeState = "#researchandprojects";
-      $(activeState).show();
-    } else {
-      $(activeState).hide();
-      activeState = "#canvas";
-      $(activeState).show();
-    }
+    currentStateConsider("#canvas");
   });
 
   $("#physicsClick").click(function() {
-    if($('#cmd1Div').is(':visible')){
-      $(activeState).hide();
-      activeState = "#researchandprojects";
-      $(activeState).show();
-    } else {
-      $(activeState).hide();
-      activeState = "#cmd1Div";
-      $(activeState).show();
-    }
+    currentStateConsider("#cmd1Div");
   });
 
   $("#morecontent").click(function() {
-    if($('#more').is(':visible')){
-      $(activeState).hide();
-      activeState = "#researchandprojects";
-      $(activeState).show();
-    } else {
-      $(activeState).hide();
-      activeState = "#more";
-      $(activeState).show();
-    }
+    currentStateConsider("#more");
   });
 
   // Google
