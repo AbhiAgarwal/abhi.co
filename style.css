@@ -86,12 +86,10 @@ body.loading .modal {
   background-color: #224b8d;
   color: #90d299;
   padding: 20px 20px 20px 20px;
-  font-family: 'Source Code Pro';
+  font-family: 'Arvo', serif;
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
-#shell-cli .prompt {
-  font-weight: bold;
-}
+code, pre, .codelike { font-family: 'Arvo', serif; }

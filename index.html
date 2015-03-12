@@ -30,7 +30,7 @@
           </p>
           <h2>links</h2>
           <p>
-            <a href="mailto:me@abhiagarwal.com?Subject=Coffee!" target="_top">me@abhiagarwal.com</a><br>
+            <a href="mailto:hi@abhi.co?Subject=Coffee!" target="_top">email</a><br>
             <a href="http://twitter.com/abhiagarwal">twitter</a><br>
             <a href="http://www.linkedin.com/in/abhimagarwal">linkedin</a><br>
             <a href="http://github.com/abhiagarwal">github</a><br>
@@ -46,12 +46,12 @@
         <td width="2%" valign="top"></td>
         <td width="78%" id="maincontent" valign="top">
           <canvas id="canvas" style="display: none;"></canvas>
-            <div id="cmd1Div" style="display: none;">
-              <div id="shell-panel">
-                <div>Type <code>help</code> or hit <code>TAB</code> for a list of commands.</div>
-                <div id="shell-view"></div>
-              </div>
+          <div id="cmd1Div" style="display: none;">
+            <div id="shell-panel">
+              <div>Type <code>help</code> or hit <code>TAB</code> for a list of commands.</div>
+              <div id="shell-view"></div>
             </div>
+          </div>
           <div id="more" style="display: none;">
             <p>
               I was born in Jaipur, India, grew up in Bangkok, Thailand, and now live in New York, US.
@@ -93,6 +93,10 @@
             <p>
               <a href="https://github.com/AbhiAgarwal/phys.js">Phys</a> is a library created for individuals who want to use simple or advanced physics functions in their day-to-day work. Phys allows users to perform physics equations on the backend, and on the front-end. Phys has libraries for mechanics, thermal physics, quantum physics, and much more. Phys was built in Javascript.
             </p>
+            <h3><a href="http://abhiagarwal.com/knowledge-and-learning-platform-2014">dubsit - 2013-2014</a></h3>
+            <p>
+              I tried to rethink the way individuals search social content online. Dubsit was a platform that ranks output from social media websites (Reddit, Quora, Pinterest, Tumblr, Twitter, bit.ly, etc.). Dubsit is based off of Machine Learning and ranking algorithms that rank content based on the statistics (upvotes, comments, shares, etc) from social media websites. This allows users to get highest voted on content in social media quickly. Dubsit was built on Python.
+            </p>
             <h2><a href="https://nyu.academia.edu/AbhiAgarwal/Papers">research</a></h2>
             <h3><a href="http://abhiagarwal.com/exploring-methods-of-quantifying-intelligence-using-theories-in-machine-learning">exploring methods of quantifying intelligence using theories in machine learning - 2014</a></h3>
             <h3><a href="http://abhiagarwal.com/steady-states-of-the-one-lane-roundabout">steady-states of the one-lane roundabout - 2014</a></h3>
@@ -116,7 +120,6 @@
 <script type="text/javascript" src="http://cdn.rawgit.com/sdether/josh.js/master/js/input.js"></script>
 <script type="text/javascript" src="http://cdn.rawgit.com/sdether/josh.js/master/js/shell.js"></script>
 <script type="text/javascript" src="http://cdn.rawgit.com/sdether/josh.js/master/js/pathhandler.js"></script>
-<script type="text/javascript" src="./example.js"></script>
 <script>
   // States
   var activeState = "#researchandprojects";
@@ -129,8 +132,9 @@
   });
   shell.setCommandHandler("mechanics.force", {
     exec: function(cmd, args, callback) {
+      var response = "Please provide a number!";
       if(!args) {
-        response = 'Please provide 2 numbers!';
+        response = "Please provide a number!";
       } else if(args.length == 1) {
         var returnValue = "Force = Mass * Acceleration, where Mass is " + args[0] + " becomes " + phys.mechanics.force(args[0]);
         response = returnValue;
@@ -138,7 +142,7 @@
       callback(response);
       },
     completion: function(cmd, arg, line, callback) {
-      callback(shell.bestMatch(arg, ['world', 'josh']))
+      callback(shell.bestMatch(arg, ['Mass']))
     }
   });
   shell.activate();
