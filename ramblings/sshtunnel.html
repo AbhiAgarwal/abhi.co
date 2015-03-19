@@ -43,10 +43,13 @@
               The next step is limited to Mac OSX. Go to System Preferences, Network, Wifi/Ethernet (depending on what you're using to connect), Advanced, Proxy. Then turn on SOCKS Proxy with the details being 127.0.0.1:8080. This means that the input before the colon is 127.0.0.1, and the input after the colon is 8080.
             </p>
             <p>
+              Some people have <a href="https://chrome.google.com/webstore/detail/hola-better-internet/gkojfkhlekighikafcpjkiklfbnlmeio?hl=en">Hola</a> installed on Chrome. Disable this if you're going to use the proxy with Chrome. Hola takes control of the proxy in Chrome when it's enabled (it's how it manages to connect you through different countries).
+            </p>
+            <p>
               This step is for Linux. You have to export your http_proxy variable in order for this to work. <pre><code class="language-bash">export http_proxy="http://127.0.0.1:8080"</code></pre> Run this in the command line.
             </p>
             <p>
-              Now try and visit <a href="http://whatismyip.com">whatismyip.com</a>, and see if the IP reflects the IP of your server. Congrats! You've just setup a SSH tunnel :)
+              Now try and visit <a href="http://whatismyip.com">whatismyip.com</a>, and see if the IP reflects the IP of your server. Congrats! You've just setup a SSH tunnel :) Or run this command in the command line! <pre><code class="language-bash">dig +short myip.opendns.com @resolver1.opendns.com</code></pre>
             </p>
           </div>
         </td>
