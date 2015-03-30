@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Abhi Agarwal</title>
+  <meta content='Abhi Agarwal' property='og:title'>
+  <meta content='website' property='og:type'>
+  <meta content='http://abhi.co/' property='og:url'>
+  <meta content='Abhi Agarwal' property='og:site_name'>
+  <meta name="description" content="Abhi Agarwal portfolio">
+  <meta name="keywords" content="Abhi Agarwal, Abhi Mangal Agarwal, Abhi, Agarwal, NYU, Abhi NYU, Abhi Agarwal NYU, nyu, Agarwal Abhi">
+  <meta content='Projects, Interests, Knowledge, and Information' property='og:description'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../style.css">
+  <link href='../favicon.ico' rel='shortcut icon' type='image/x-icon'>
+  <link href="prism.css" rel="stylesheet" />
+  <style>
+      tab { padding-left: 4em; }
+  </style>
+</head>
+<body>
+  <h1 id="activeState">abhi agarwal</h1>
+  <div>
+    <table width="100%" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td width="100%" id="maincontent" valign="top">
+          <div id="tutorials">
+            <h2>software</h2>
+              <p>
+                I talk to some of my friends and sometimes people have issues understanding why some software is important and how some of these pieces of technology are useful. It's understandable because in the tech industry some of the stacks are quite massive, and new technologies are invented as new issues arise (new issues arise everyday).
+              </p>
+              <p>
+                This page is just my views & readings on some of these technologies. This page is by no means a tutorial or a guide.
+              </p>
+            <h2>Big Data</h2>
+            <p>
+              The category of Big Data holds these following technologies because the technologies listed below become useful when you have an enormously large dataset. If you're needing to do processing for a huge dataset you would utilize one of the technologies. Most of them offer scalability and a large number of contributors as well.
+            </p>
+            <h3><a href="https://hadoop.apache.org/">Hadoop</a></h3>
+            <p>
+              
+            </p>
+            <h3><a href="https://storm.apache.org/">Apache Storm</a></h3>
+              <p>
+                Focuses on stream processing/complex event processing. Basically for some incoming data into the system it allows for realtime computation on it. At Twitter this is used to process and analyse every Tweet to provide analytics for both users and to advertisers. They also use Storm to run their anti-spam, and content discovery classifiers.
+              </p>
+              <p>
+                More uses are to transform unstructured data into structured data. For example, if you wanted check the spelling and correct it for each tweet then you can use Apache Storm for that. The process would be: Tweet coming in -> Check Spelling -> Fix Spelling -> Send to Database -> Display to users. Basically the idea is that Storm can be used to process streaming data.
+              </p>
+              <p>
+                Storm processes data one at a time - meaning that it processes each record before moving on to the next one.
+              </p>
+              <p>
+                If you'd like to know more about why Storm exists then checkout the <a href="http://storm.apache.org/documentation/Rationale.html">Rationale</a> of why it was created.
+              </p>
+              <p> 
+              References 
+              <a href="http://stackoverflow.com/questions/24119897/apache-spark-vs-apache-storm">1</a>, 
+              <a href="http://www.quora.com/What-are-some-of-the-use-cases-of-Apache-Storm">2</a>.
+              </p>
+            <h3><a href="https://spark.apache.org/">Apache Spark</a></h3>
+              <p>
+                Spark is inherently a data analytics platform. One of the key facts is that it's an in-memory platform meaning that everything is stored in RAM rather than on disk. According to users online it's mostly used for "speeding up batch analysis jobs, iterative machine learning jobs, interactive query and graph processing".
+              </p>
+              <p>
+                At eBay they use Spark for many things. One example is that they run Machine Learning jobs using the MLlib library.  They use Spark to run Machine Learning jobs in the background. At some other companies they use Spark to process their analytics that are coming in. Spark is also noted to be 100x faster than Apache Hadoop's MapReduce.
+              </p>
+              <p>
+                Spark processes data in batches - meaning that it processes more than one record at a time.
+              </p>
+              <p> 
+              References 
+              <a href="http://stackoverflow.com/questions/24119897/apache-spark-vs-apache-storm">1</a>, 
+              <a href="http://blog.cloudera.com/blog/2013/11/putting-spark-to-use-fast-in-memory-computing-for-your-big-data-applications/">2</a>,
+              <a href="http://www.ebaytechblog.com/2014/05/28/using-spark-to-ignite-data-analytics/#.VRmY28tViko">3</a>.
+              </p>
+            <h3>Apache Spark vs Storm</h3>
+              <p>
+              Discussions: 
+              <a href="http://xinhstechblog.blogspot.com/2014/06/storm-vs-spark-streaming-side-by-side.html">1</a>,
+              <a href="http://www.zdatainc.com/2014/09/apache-storm-apache-spark/" title="">2</a>.
+              </p>
+            <h3>Apache Spark vs Hadoop MapReduce</h3>
+            <p>
+              Discussion:
+              <a href="https://www.xplenty.com/blog/2014/11/apache-spark-vs-hadoop-mapreduce/">1</a>.
+            </p>
+            </p>
+
+            <h2>Continuous integration tools</h2>
+            <p>
+              
+            </p>
+            <h3>TravisCI</h3>
+            <p>
+              TravisCI is a distributed continuous integration service that builds and tests projects that are hosted on Github. Basically TravisCI sets up a hook on Github that monitors for any commits on branches you specify. You have to specify a travis.yml file. When any commits occur it follows the steps you give in the travis.yml file. 
+            </p>
+            <p>
+              Say you had a jekyll project set up. You could essentially re-build the jekyll project and upload it onto your webserver using TravisCI.
+            </p>
+            <h3>CircleCI</h3>
+            <p>
+              Very similar to TravisCI, but also supports private repositories for free and gives access to the SSH server it tests/builds your code on. In configuration it uses a circle.yml file instead of a travis.yml file. The setup of the file is a little different, but there are enough tutorials online.
+            </p>
+            <p>
+              Here are some sample files: <a href="https://github.com/TechAtNYU/build-tools/tree/master/circleci">1</a>. If you're not sure the $(whatever) basically means that it's an environment variable, which is something you can set up on CircleCI and TravisCI. Environment variables help you hide passwords by storing them on CircleCI rather than exposing them to users online. 
+            </p>
+            <h3>JenkinsCI</h3>
+            <p>
+              Jenkins is an open-source continuous integration server. Meaning that it does things similar to CircleCI and TravisCI, but you've to selfhost it. Some large companies use this because it's customizable. Jenkins is used by Facebook, eBay, Etsy, Github, and many other companies [1]. 
+            </p>
+            <p>
+              Reference 
+              <a href="https://wiki.jenkins-ci.org/pages/viewpage.action?pageId=58001258" >1</a>.
+            </p>
+            <h3>TravisCI vs CircleCI</h3>
+            <p>
+              Discussion: 
+              <a href="http://www.slant.co/topics/186/compare/~circleci_vs_shippable_vs_codeship">1</a>.
+            </p>
+
+            <h2>Cluster management</h2>
+            <p>
+              Mesos's slogan is "Program against your datacenter like it’s a single pool of resources". In this category you'll see technologies that were created to help manage a large number of servers, and are usually used by companies that are utilizing 1,000+ servers.
+            </p>
+            <h3><a href="http://mesos.apache.org/">Apache Mesos</a></h3>
+            <p>
+              Apache Mesos sets out to "[abstract] CPU, memory, storage, and other compute resources away from machines". For companies with large datacenters it gives them the ability abstract away the lower level functionality of each particular server and give them access to higher level functionality that they might need. A startup <a href="http://mesosphere.com/" title="">Mesosphere</a> advertises their operating system, which is based on Mesos, as "the datacenter operating system".
+            </p>
+            <p>
+              Large companies such as Twitter, Netflix, AirBnB, eBay, and many other use Mesos for certain applications. From Wikipedia: 
+              <ul>
+                <li>Twitter writes Mesos "is the cornerstone of [Twitter's] elastic compute infrastructure" and "a number of key Twitter services run in production on Mesos: including analytics, typeahead, ads and more". </li>
+                <li>AirBnB uses Mesos to run a number of data processing systems like Apache Hadoop and Apache Spark. </li>
+                <li>Popular internet auction website eBay uses Mesos to run continuous integration on a per-developer basis. They accomplish this by using a custom Mesos plugin that allows developers to launch their own private Jenkins instance.</li>
+              </ul>
+            </p>
+            <p>
+              There is a good introduction at reference [1].
+            </p>
+            <p>
+              References
+              <a href="http://www.antonlindstrom.com/2015/03/29/introduction-to-apache-mesos.html">1</a>, 
+              <a href="https://en.wikipedia.org/wiki/Apache_Mesos">2</a>.
+            </p>
+
+            <h1>To do</h1>
+
+            <h2>Build tools</h2>
+            <h3>Apache Ant</h3>
+            <h3>GNU make</h3>
+            <h3>Rake</h3>
+            <h3>Apache Maven</h3>
+            <h3>Gradle</h3>
+            <h3>MSBuild</h3>
+            <h3>SCons</h3>
+            <h3>CMake</h3>
+
+            <h2>Configuration management tools</h2>
+            <h3>Chef</h3>
+            <h3>Puppet</h3>
+            <h3>Ansible</h3>
+
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="modal"></div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="prism.js"></script>
+<script>
+  // Google
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-60443207-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
