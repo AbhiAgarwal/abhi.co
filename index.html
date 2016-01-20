@@ -11,7 +11,7 @@
   <meta name="description" content="Abhi Agarwal portfolio">
   <meta name="keywords" content="Abhi Agarwal, Abhi Mangal Agarwal, Abhi, Agarwal, NYU, Abhi NYU, Abhi Agarwal NYU, nyu, Agarwal Abhi">
   <meta content='Projects, Interests, Knowledge, and Information' property='og:description'>
-  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
   <link href='favicon.ico' rel='shortcut icon' type='image/x-icon'>
 </head>
@@ -77,11 +77,11 @@
             </p>
           </div>
           <div id="researchandprojects">
-            <center><img id="knowledgeImage" src="http://media.giphy.com/media/OQsa4Yca9BJFS/giphy.gif" style="display: none;"></center>
-            <center><img id="robotImage" src="http://media.giphy.com/media/Vm6YGB3Ng8lnW/giphy.gif" style="display: none;"></center>
-            <center><img id="codeImage" src="http://media.giphy.com/media/gU25raLP4pUu4/giphy.gif" style="display: none;"></center>
-            <center><img id="mathImage" src="http://media.giphy.com/media/5yLgoceFO3BdJW1zvFu/giphy.gif" style="display: none;"></center>
-            <center><img id="engineeringImage" src="http://media.giphy.com/media/lONzQGbukaCqI/giphy.gif" style="display: none;"></center>
+            <center><img id="knowledgeImage" src="https://media.giphy.com/media/OQsa4Yca9BJFS/giphy.gif" style="display: none;"></center>
+            <center><img id="robotImage" src="https://media.giphy.com/media/Vm6YGB3Ng8lnW/giphy.gif" style="display: none;"></center>
+            <center><img id="codeImage" src="https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif" style="display: none;"></center>
+            <center><img id="mathImage" src="https://media.giphy.com/media/5yLgoceFO3BdJW1zvFu/giphy.gif" style="display: none;"></center>
+            <center><img id="engineeringImage" src="https://media.giphy.com/media/lONzQGbukaCqI/giphy.gif" style="display: none;"></center>
             <h2><a href="http://abhiagarwal.com/">projects</a></h2>
             <h3><a href="http://gif.gallery/">gif.gallery - 2015</a></h3>
             <p>
@@ -121,16 +121,16 @@
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
-<script type="text/javascript" src="http://physjs.com/js/phys.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/phys.js/master/src/phys.min.js"></script>
 <script type="text/javascript">Josh = {Debug: false};</script>
-<script type="text/javascript" src="http://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/history.js"></script>
-<script type="text/javascript" src="http://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/killring.js"></script>
-<script type="text/javascript" src="http://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/readline.js"></script>
-<script type="text/javascript" src="http://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/input.js"></script>
-<script type="text/javascript" src="http://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/shell.js"></script>
-<script type="text/javascript" src="http://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/pathhandler.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/history.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/killring.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/readline.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/input.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/shell.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/AbhiAgarwal/josh.js/master/js/pathhandler.js"></script>
 <script>
   // States
   var activeState = "#researchandprojects";
@@ -166,72 +166,6 @@
   weekday[4] = "Friday";
   weekday[5] = "Saturday";
   weekday[6]=  "Sunday";
-  window.onload = function(){
-    $body = $("body");
-    $(document).on({
-      ajaxStart: function() { $body.addClass("loading");},
-      ajaxStop: function() { $body.removeClass("loading");}
-    });
-    $.ajax({
-      dataType: "json",
-      url: "http://api.abhi.co/api",
-      beforeSend: function(){
-        $body.addClass("loading");
-      },
-      complete: function(){
-        $body.removeClass("loading");
-      }
-    }).done(function(data){
-      var labelsList = [], 
-          productivityPercentageList = [],
-          softwarePercentageList = [],
-          distractingPercentageList = [],
-          weather = [];
-      var productivityAverage = 0,
-          softwareAverage = 0,
-          distractionAverage = 0;
-      for (var i = 0; i < 7; ++i) {
-        productivityAverage += data[i]["productivity_pulse"];
-        softwareAverage += data[i]["software_development_percentage"];
-        distractionAverage += data[i]["all_distracting_percentage"];
-
-        var d = new Date(data[i]["date"]);
-        labelsList.push(weekday[d.getDay()]);
-        productivityPercentageList.push(data[i]["productivity_pulse"]);
-        softwarePercentageList.push(data[i]["software_development_percentage"]);
-        distractingPercentageList.push(data[i]["all_distracting_percentage"]);
-      };
-
-      labelsList = labelsList.reverse();
-      productivityPercentageList = productivityPercentageList.reverse();
-      softwarePercentageList = softwarePercentageList.reverse();
-      distractingPercentageList = distractingPercentageList.reverse();
-      productivityAverage /= 7;
-      softwareAverage /= 7;
-      distractionAverage /= 7;
-      var lineChartData = {
-        labels : labelsList,
-        datasets : [
-          {
-            label: "Productivity Percentage",
-            legendText: "Productivity Percentage",
-            fillColor : "rgba(220,220,220,0.2)",
-            strokeColor : "rgba(220,220,220,1)",
-            pointColor : "rgba(220,220,220,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(220,220,220,1)",
-            data : productivityPercentageList
-          }
-        ]
-      };
-      var options = {
-        responsive: true
-      };
-      var ctx = document.getElementById("canvas").getContext("2d");
-      window.myLine = new Chart(ctx).Line(lineChartData, options);
-    });
-  }
   function visibleActiveState(){
     $(activeState).hide();
     activeState = "#researchandprojects";

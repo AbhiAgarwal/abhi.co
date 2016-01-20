@@ -64,7 +64,7 @@ a:hover {
     height:     100%;
     width:      100%;
     background: rgba( 255, 255, 255, .8 )
-                url('http://abhi.co/loading.gif') 
+                url('https://abhi.co/loading.gif') 
                 50% 50% 
                 no-repeat;
 }
